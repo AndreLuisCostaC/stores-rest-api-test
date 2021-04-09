@@ -36,15 +36,15 @@ class StoreTest(BaseTest):
             self.assertEqual(store.items.count(), 1)
             self.assertEqual(store.items.first().name, 'test_item')
 
-    def test_store_json(self):
-        store = StoreModel('test')
-        expected = {
-            'id': None,
-            'name': 'test',
-            'items': []
-        }
-
-        self.assertDictEqual(store.json(), expected)
+    # def test_store_json(self):
+    #     store = StoreModel('test')
+    #     expected = {
+    #         'id': None,
+    #         'name': 'test',
+    #         'items': []
+    #     }
+    #
+    #     self.assertDictEqual(store.json(), expected)
 
     def test_store_json_with_item(self):
         with self.app_context():

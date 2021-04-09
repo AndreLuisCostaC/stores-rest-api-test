@@ -85,4 +85,3 @@ class StoreTest(BaseTest):
 
                 self.assertDictEqual({'stores': [{'id': 1, 'name': 'test', 'items': [{'name': 'test', 'price': 19.99}]}]},
                                      json.loads(resp.data))
-                
